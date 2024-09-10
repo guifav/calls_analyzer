@@ -35,7 +35,7 @@ Este projeto utiliza Inteligência Artificial para transcrever e analisar chamad
 
 1. **Transcrição**:
    - Coloque os arquivos MP3 nas pastas apropriadas dos SDRs dentro do diretório `ai_gri` no Google Drive.
-   - Execute `1_transcricao_calls.py` para transcrever todos os arquivos de áudio.
+   - Execute `1_transcricao_ligacoes.py` para transcrever todos os arquivos de áudio.
 
 2. **Análise**:
    - Execute `2_analise_consolidada.py` para realizar a análise individual e consolidada das transcrições.
