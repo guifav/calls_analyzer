@@ -1,55 +1,61 @@
-# Análise de Transcrições de Vendedores
+# Análise de Chamadas de Vendas com IA
 
-## Visão Geral
+Este projeto utiliza Inteligência Artificial para transcrever e analisar chamadas de vendas, fornecendo insights para melhorar o desempenho dos SDRs (Representantes de Desenvolvimento de Vendas).
 
-Este projeto realiza uma análise aprofundada das transcrições de ligações de Vendedores (SDRs). O objetivo é extrair insights valiosos sobre o desempenho das vendas, identificar padrões de comunicação e fornecer recomendações para melhorias.
+## Estrutura do Projeto
+
+1. `1_transcricao_calls.py`: Transcreve arquivos de áudio usando o modelo Whisper da OpenAI.
+2. `2_analise_consolidada.py`: Analisa as transcrições e gera insights usando o modelo GPT da OpenAI.
 
 ## Funcionalidades
 
-O script Python neste projeto realiza as seguintes tarefas:
+- Transcrição automatizada de arquivos de áudio MP3
+- Análise de sentimento das transcrições de chamadas
+- Identificação de objeções comuns e padrões de vendas
+- Geração de nuvens de palavras e estatísticas-chave
+- Análise individual e consolidada do desempenho dos SDRs
 
-1. Carrega dados de transcrições de múltiplos SDRs a partir de arquivos JSON.
-2. Consolida os dados em um único arquivo JSON para análise abrangente.
-3. Utiliza a API GPT-4 da OpenAI para analisar as transcrições consolidadas.
-4. Gera um relatório de análise em formato Markdown.
-
-## Estrutura de Arquivos
-
-- `consolidated_data.json`: Contém todas as transcrições de SDRs consolidadas.
-- `analysis_result.md`: Relatório final da análise em formato Markdown.
-
-## Análise
-
-A análise abrange os seguintes aspectos:
-
-1. **Nuvem de palavras-chave**: Identifica as palavras mais frequentes e relevantes relacionadas ao processo de venda.
-2. **Principais objeções**: Destaca as objeções mais comuns levantadas pelos clientes.
-3. **Padrões positivos**: Identifica práticas eficazes que contribuem para o sucesso das ligações.
-4. **Padrões negativos**: Detecta áreas de melhoria no desempenho das ligações.
-5. **Sugestões de treinamento**: Propõe áreas de desenvolvimento para melhorar o desempenho dos SDRs.
-
-## Como Usar
-
-1. Certifique-se de que os arquivos JSON originais das transcrições estão na pasta correta do Google Drive.
-2. Execute o script Python para gerar o arquivo JSON consolidado e a análise.
-3. Acesse `analysis_result.md` para ver os insights e recomendações detalhadas.
-
-## Requisitos
+## Pré-requisitos
 
 - Python 3.x
-- Bibliotecas: json, os, openai
-- Acesso à API da OpenAI (chave de API necessária)
-- Google Colab (para integração com Google Drive)
+- Chave de API da OpenAI
+- Google Colab (para executar os notebooks)
+- Acesso ao Google Drive (para armazenar arquivos de áudio e resultados)
 
-## Notas Importantes
+## Configuração
 
-- Este projeto utiliza a API GPT-4 da OpenAI. Certifique-se de ter créditos suficientes e de manter sua chave de API segura.
-- Os dados das transcrições são sensíveis. Garanta que apenas pessoas autorizadas tenham acesso aos resultados.
+1. Clone este repositório para seu Google Drive.
+2. Certifique-se de ter as chaves de API necessárias configuradas em seu ambiente Google Colab.
+3. Instale as bibliotecas necessárias:
+   ```
+   !pip install openai nltk matplotlib wordcloud
+   ```
 
-## Próximos Passos
+## Uso
 
-- Implementar visualizações dos dados para facilitar a compreensão dos insights.
-- Automatizar a execução periódica da análise para acompanhamento contínuo.
-- Integrar os insights com sistemas de treinamento e avaliação de desempenho dos SDRs.
+1. **Transcrição**:
+   - Coloque os arquivos MP3 nas pastas apropriadas dos SDRs dentro do diretório `ai_gri` no Google Drive.
+   - Execute `1_transcricao_calls.py` para transcrever todos os arquivos de áudio.
 
-Para quaisquer dúvidas ou sugestões, entre em contato com [seu nome/equipe responsável].
+2. **Análise**:
+   - Execute `2_analise_consolidada.py` para realizar a análise individual e consolidada das transcrições.
+   - O script irá gerar visualizações e salvar os resultados da análise em formato markdown.
+
+## Saída
+
+- Arquivos JSON contendo transcrições de chamadas para cada SDR
+- Arquivo markdown com análise detalhada de padrões de vendas, objeções e sugestões de melhoria
+- Visualizações incluindo distribuição de sentimentos, análise de duração de chamadas e nuvens de palavras
+
+## Contribuições
+
+Contribuições para melhorar os algoritmos de análise ou adicionar novas funcionalidades são bem-vindas. Por favor, envie um pull request com suas alterações propostas.
+
+## Licença
+
+[Licença MIT](LICENSE)
+
+## Agradecimentos
+
+- OpenAI por fornecer os modelos Whisper e GPT
+- NLTK pelas ferramentas de processamento de linguagem natural
