@@ -4,7 +4,7 @@ Este projeto utiliza Inteligência Artificial para transcrever e analisar chamad
 
 ## Estrutura do Projeto
 
-1. `1_transcricao_calls.py`: Transcreve arquivos de áudio usando o modelo Whisper da OpenAI.
+1. `1_transcricao_ligacoes.py`: Transcreve arquivos de áudio usando o modelo Whisper da OpenAI.
 2. `2_analise_consolidada.py`: Analisa as transcrições e gera insights usando o modelo GPT da OpenAI.
 
 3. A estrutura do projeto e dos arquivos devem estar conforme abaixo:
