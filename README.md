@@ -1,4 +1,4 @@
-# Análise de Chamadas de Vendas com IA
+# Análise de Chamadas / Ligações de Vendas com IA
 
 Este projeto utiliza Inteligência Artificial para transcrever e analisar chamadas de vendas, fornecendo insights para melhorar o desempenho dos SDRs (Representantes de Desenvolvimento de Vendas).
 
